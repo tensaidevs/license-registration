@@ -39,6 +39,6 @@ async function main() {
 }
 
 main().catch((err) => {
-  console.error("Error during migration ->", err);
+  console.error("Error during migration .->", err);
   process.exit(1);
 });

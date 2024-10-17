@@ -14,11 +14,11 @@ app.use(express.static("public"));
 
 // routes import
 import authRoutes from "./routes/auth.routes";
-// import uploadFilesRoutes from "./routes/uploadFiles.routes";
+import armsRoutes from "./routes/arms.routes";
 
 // routes decleration
 app.use("/api/v1/auth", authRoutes);
-// app.use("/api/v1/files", uploadFilesRoutes);
+app.use("/api/v1/arms-application", armsRoutes);
 
 app.get("/", (req, res) => {
   res.redirect("http://localhost:5000");

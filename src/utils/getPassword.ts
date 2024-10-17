@@ -1,7 +1,7 @@
 import jwt, { type JwtPayload } from "jsonwebtoken";
 import { ApiError } from "./ApiError";
 
-export const getUserId = (token: string) => {
+export const getPassword = (token: string) => {
   if (!token) {
     throw new ApiError(401, "Unauthorized Request");
   }
@@ -15,12 +15,12 @@ export const getUserId = (token: string) => {
   const decodedToken = jwt.verify(token, process.env.JWT_SECRET_KEY as string);
 
   // If token is verified successfully, decodedToken will have the type of the payload provided when signing the token
-  let userId: string | undefined;
+  let password: string | undefined;
 
   if (typeof decodedToken === "string") {
-    userId = decodedToken;
+    password = decodedToken;
   } else {
-    userId = (decodedToken as JwtPayload).userId as string;
+    password = (decodedToken as JwtPayload).password as string;
   }
-  return userId as string;
+  return password as string;
 };

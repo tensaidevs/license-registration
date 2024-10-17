@@ -1,7 +1,7 @@
 import type { Request, Response, NextFunction } from "express";
 import { asyncHandler } from "@/utils/asyncHandler";
 import { getUserRole } from "@/utils/getUserRole";
-import { getUserId } from "@/utils/getUserId";
+import { getUserId } from "@/utils/getPassword";
 import { ApiError } from "@/utils/ApiError";
 import { sendError } from "@/utils/sendError";
 
