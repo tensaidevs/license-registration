@@ -1,1 +1,1 @@
- This is backend code (TypeScript) for Template Name
+ This is backend code (TypeScript) for License Registration App
